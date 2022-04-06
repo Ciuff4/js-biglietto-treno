@@ -37,7 +37,7 @@ if (age<18){
 };
 
 if(age>65){
-    kmPrice= Math.round((kmPrice-((kmPrice /100)*elderDiscount) * 100) / 100;
+    kmPrice= Math.round((kmPrice-((kmPrice /100)*elderDiscount)) * 100) / 100;
 }
 
 const output= 
