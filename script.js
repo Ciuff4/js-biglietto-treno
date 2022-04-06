@@ -10,10 +10,25 @@ L’output del prezzo finale va messo fuori in forma umana (con massimo due deci
 */
 
 let kmTravel= prompt("Quanti chilometri hai intenzione di percorrere?");
+
+if(isNaN(kmTravel)){
+    alert ("Inserire un numero valido")
+};
+
+
 let age= prompt("Quanti anni hai?");
+
+if(isNaN(age)){
+    alert ("Inserire un numero valido")
+};
+
 const pricePerKm= 0.21;
 
 let kmPrice= kmTravel*pricePerKm;
+
+
+
+
 
 if (age<18){
     kmPrice= Math.round(((kmPrice /100)*20) * 100) / 100;
