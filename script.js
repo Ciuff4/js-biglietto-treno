@@ -28,10 +28,6 @@ const elderDiscount= 40
 
 let kmPrice= kmTravel*pricePerKm;
 
-
-
-
-
 if (age<18){
     kmPrice= Math.round((kmPrice-((kmPrice /100)*youngDiscount)) * 100) / 100;
 };
@@ -46,14 +42,14 @@ const output=
             <p>in base hai dati che hai fornito:
                 <ul>
                     <li>
-                        Km che intendi percorrere: ${kmTravel}
+                        Km che intendi percorrere: ${kmTravel} km
                     </li>
                     <li>
                         Anni:${age}
                     </li>
                     
                 </ul>
-                Il prezzo degli biglietto è di:${kmPrice}
+                Il prezzo degli biglietto è di:${kmPrice} euro
             </p>
 `;
 
