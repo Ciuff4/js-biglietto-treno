@@ -23,6 +23,8 @@ if(isNaN(age)){
 };
 
 const pricePerKm= 0.21;
+const youngDiscount= 20
+const elderDiscount= 40
 
 let kmPrice= kmTravel*pricePerKm;
 
@@ -31,11 +33,11 @@ let kmPrice= kmTravel*pricePerKm;
 
 
 if (age<18){
-    kmPrice= Math.round(((kmPrice /100)*20) * 100) / 100;
+    kmPrice= Math.round((kmPrice-((kmPrice /100)*youngDiscount)) * 100) / 100;
 };
 
 if(age>65){
-    kmPrice= Math.round(((kmPrice /100)*40) * 100) / 100;
+    kmPrice= Math.round((kmPrice-((kmPrice /100)*elderDiscount) * 100) / 100;
 }
 
 const output= 
@@ -49,6 +51,7 @@ const output=
                     <li>
                         Anni:${age}
                     </li>
+                    
                 </ul>
                 Il prezzo degli biglietto è di:${kmPrice}
             </p>
