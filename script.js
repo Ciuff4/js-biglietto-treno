@@ -9,11 +9,20 @@ va applicato uno sconto del 40% per gli over 65.
 L’output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo). Questo richiederà un minimo di ricerca.
 */
 
-let kmTravel= prompt("Quanti chilometri hai intenzione di percorrere?")
-let age= prompt("Quanti anni hai?") 
+let kmTravel= prompt("Quanti chilometri hai intenzione di percorrere?");
+let age= prompt("Quanti anni hai?");
 const pricePerKm= 0.21;
 
-const kmPrice= kmTravel*pricePerKm
+let kmPrice= kmTravel*pricePerKm;
+
+if (age<18){
+    kmPrice= Math.round(((kmPrice /100)*20) * 100) / 100;
+};
+
+if(age>65){
+    kmPrice= Math.round(((kmPrice /100)*40) * 100) / 100;
+}
+
 const output= 
 `
     <h1>Il prezzo del biglietto</h1>
@@ -32,4 +41,4 @@ const output=
 
 console.log(output);
 
-document.getElementById("cg-price").innerHTML=output
+document.getElementById("cg-price").innerHTML=output;
